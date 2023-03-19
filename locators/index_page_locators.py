@@ -1,8 +1,4 @@
-class BasePageLocators:
-    NAVBAR = ".navbar"
+class IndexPageLocators:
     BANNER = ".pozadina2"
-    HOME = ".nav-link:text('ZAČETNA')"
-    SALARIES = ".nav-link:text('PLAČE')"
-    REVIEWS = ".nav-link:text('MNENJA')"
-    COMPANIES = ".nav-link:text('PODJETJA')"
-    FOOTER = "footer"
+    DROPDOWN = "#naziv"
+    BTN = "#poglej"

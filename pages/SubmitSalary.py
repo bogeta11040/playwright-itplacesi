@@ -1,13 +1,15 @@
 from playwright.sync_api import Page
 from playwright.sync_api import expect
 from locators.submit_salary_locators import SubmitSalaryLocators
+from pages.BasePage import BasePage
 
 
-class SubmitSalary:
+class SubmitSalary(BasePage):
     def __init__(self, page: Page):
         self.page = page
 
     def test_elements_presence(self):
+        super().test_elements_presence()
         expect(self.page.locator(SubmitSalaryLocators.COMPANY_LOCATION)).to_be_visible()
         expect(self.page.locator(SubmitSalaryLocators.COMPANY_NAME)).to_be_visible()
         expect(self.page.locator(SubmitSalaryLocators.POSITION)).to_be_visible()
